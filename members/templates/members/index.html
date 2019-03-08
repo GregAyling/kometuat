@@ -1,0 +1,26 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'members/style.css' %}">
+
+
+{% if latest_member_list %}
+
+    <h1>KSG Members</h1>
+    
+    <form method="GET" action="" id="searchform" autocomplete="off">
+        Search: <input class="searchfield" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search..."/>
+    </form>
+
+    <ul>
+    {% for member in latest_member_list %}
+    <li><a href="{% url 'members:detail' member.id %}">{{ member.first_names }} {{ member.last_name }}</a></li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+
+    <p>No members are available.</p>
+
+{% endif %}
+
+

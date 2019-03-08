@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'members/style.css' %}">
+
+<h1>{{ member.first_names }} {{ member.last_name }}</h1>
+<p>Date of birth: {{ member.date_of_birth }}</p>
+<form method="post">
+    {% csrf_token %} 
+    <label for="dob">Date of birth: </label>
+    <input id="dob" type="date" name="dob" value="{{ member.date_of_birth|date:"Y-m-d" }}">
+    <br><br>
+    <input type="submit" value="Submit changes">
+</form>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<a href="{% url 'members:index' %}">Return to membership list</a>
