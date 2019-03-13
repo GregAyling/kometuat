@@ -37,8 +37,8 @@ HELP_TEXT = {
 
 # Create your models here.
 class Member(models.Model):
-    address_1 = models.CharField(max_length=30, null=True, blank=True, verbose_name="Address 1")
-    address_2 = models.CharField(max_length=30, null=True, blank=True, verbose_name="Address 2")
+    address_1 = models.CharField(max_length=100, null=True, blank=True, verbose_name="Address 1")
+    address_2 = models.CharField(max_length=100, null=True, blank=True, verbose_name="Address 2")
     adult_investiture = models.DateField(null=True, blank=True, verbose_name="Adult Investiture")
     medical_alert = models.BooleanField(default=False, null=True, blank=True, verbose_name="Medical Alert")
     carer_alert = models.BooleanField(default=False, null=True, blank=True, verbose_name="Carer Alert")
@@ -125,8 +125,8 @@ class Member(models.Model):
     occupation = models.CharField(max_length=30, null=True, blank=True, verbose_name="Occupation")
     place_of_birth = models.CharField(max_length=30, null=True, blank=True, verbose_name="Place of Birth")
     position_on_card = models.CharField(max_length=30, null=True, blank=True, verbose_name="Position on card")
-    post_address_1 = models.CharField(max_length=30, null=True, blank=True, verbose_name="Post Address 1")
-    post_address_2 = models.CharField(max_length=30, null=True, blank=True, verbose_name="Post Address 2")
+    post_address_1 = models.CharField(max_length=100, null=True, blank=True, verbose_name="Post Address 1")
+    post_address_2 = models.CharField(max_length=100, null=True, blank=True, verbose_name="Post Address 2")
     postal_postcode = models.CharField(max_length=30, null=True, blank=True, verbose_name="Postal Postcode")
     postal_state = models.CharField(max_length=30, null=True, blank=True, verbose_name="Postal State")
     postal_suburb = models.CharField(max_length=30, null=True, blank=True, verbose_name="Postal Suburb")
