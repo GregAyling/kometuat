@@ -2,3 +2,7 @@ django
 datetime
 xlwt
 openpyxl
+django-admin
+django-mssql
+django-pyodbc
+django-pyodbc-azure

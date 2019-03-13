@@ -97,7 +97,7 @@ class Member(models.Model):
     employer_school = models.CharField(max_length=30, null=True, blank=True, verbose_name="Employer/School")
     expiry_date = models.CharField(max_length=30, null=True, blank=True, verbose_name="Expiry Date")
     family_doctor = models.CharField(max_length=100, null=True, blank=True, verbose_name="Family Doctor")
-    family_notes = models.CharField(max_length=30, null=True, blank=True, verbose_name="Family notes")
+    family_notes = models.CharField(max_length=100, null=True, blank=True, verbose_name="Family notes")
     first_aid_cert = models.DateField(null=True, blank=True, verbose_name="First Aid Cert")
     first_invested = models.DateField(null=True, blank=True, verbose_name="First Invested")
     first_names = models.CharField(max_length=30, null=True, blank=True, verbose_name="First Names")
