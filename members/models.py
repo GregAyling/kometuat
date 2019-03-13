@@ -37,8 +37,8 @@ HELP_TEXT = {
 
 # Create your models here.
 class Member(models.Model):
-    address_1 = models.CharField(max_length=100, null=True, blank=True, verbose_name="Address 1")
-    address_2 = models.CharField(max_length=100, null=True, blank=True, verbose_name="Address 2")
+    address_1 = models.CharField(max_length=50, null=True, blank=True, verbose_name="Address 1")
+    address_2 = models.CharField(max_length=50, null=True, blank=True, verbose_name="Address 2")
     adult_investiture = models.DateField(null=True, blank=True, verbose_name="Adult Investiture")
     medical_alert = models.BooleanField(default=False, null=True, blank=True, verbose_name="Medical Alert")
     carer_alert = models.BooleanField(default=False, null=True, blank=True, verbose_name="Carer Alert")
@@ -63,7 +63,7 @@ class Member(models.Model):
     carer_1_interests = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 1 Interests")
     carer_1_mobile = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 1 Mobile")
     carer_1_name = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 1 Name")
-    carer_1_occupation = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 1 Occupation")
+    carer_1_occupation = models.CharField(max_length=50, null=True, blank=True, verbose_name="Carer 1 Occupation")
     carer_1_previous_scouting = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 1 Previous Scouting")
     carer_1_relationship = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 1 Relationship")
     carer_1_skills = models.CharField(max_length=100, null=True, blank=True, verbose_name="Carer 1 Skills")
@@ -77,7 +77,7 @@ class Member(models.Model):
     carer_2_interests = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 2 Interests")
     carer_2_mobile = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 2 Mobile")
     carer_2_name = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 2 Name")
-    carer_2_occupation = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 2 Occupation")
+    carer_2_occupation = models.CharField(max_length=50, null=True, blank=True, verbose_name="Carer 2 Occupation")
     carer_2_previous_scouting = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 2 Previous Scouting")
     carer_2_relationship = models.CharField(max_length=30, null=True, blank=True, verbose_name="Carer 2 Relationship")
     carer_2_skills = models.CharField(max_length=100, null=True, blank=True, verbose_name="Carer 2 Skills")
